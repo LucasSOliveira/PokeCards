@@ -1,0 +1,48 @@
+// BRAND BACKGROUND
+.bg-brand-primary { background: $color-brand-primary }
+.bg-brand-secondary { background: $color-brand-secondary }
+.bg-white { background: $color-ui-white }
+
+// GRAY SCALE BG
+.bg-black { background: #000 }
+.bg-gray-01 { background: #5E6366 }
+.bg-gray-02 { background: #979797 }
+.bg-white { background: $color-ui-white }
+
+// OPACITY BG
+
+// ACCENT BG
+.bg-ui-accent { background: $color-ui-accent }
+
+// TEXT
+.text-brand-primary { color: $color-brand-primary }
+.text-brand-secondary { color: $color-brand-secondary }
+
+.text-white { color: $color-ui-white }
+.text-black { color: #000 }
+.text-accent { color: $color-ui-accent }
+.text--success { color: $color-ui-success }
+.text-warning { color: $color-ui-warning }
+.text-danger { color: $color-ui-danger }
+.text-grey { color: $color-ui-gray }
+
+.text-current { color: currentColor }
+
+// TEXT OPACITY
+.font-opacity-hg { opacity: $font-opacity-hg }
+.font-opacity-md { opacity: $font-opacity-md }
+.font-opacity-sm { opacity: $font-opacity-sm }
+
+//CLASS POKEMON TYPE
+
+.bg-darkness { background-color: $color-type-darkness }
+.bg-grass { background-color: $color-type-grass }
+.bg-metal { background-color: $color-type-metal }
+.bg-lightning { background-color: $color-type-lightning }
+.bg-fire { background-color: $color-type-fire }
+.bg-colorless { background-color: $color-type-colorless }
+.bg-water { background-color: $color-type-water }
+.bg-psychic { background-color: $color-type-psychic }
+.bg-dragon { background-color: $color-type-dragon }
+.bg-fighting { background-color: $color-type-fighting}
+.bg-default { background-color: #5E6366}

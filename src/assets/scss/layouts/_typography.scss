@@ -1,0 +1,49 @@
+.font-01 {font-family: $font-family-01;}
+
+// SIZE
+.font-display-01 { font-size: $font-size-display-hg; }
+.font-display-02 { font-size: $font-size-display-md; }
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+p {
+  font-size: $font-size-paragraph;
+  line-height: 1.4;
+}
+.font-mobile-default {
+    font-size: $font-size-mb-default;
+}
+
+.high-p {
+  font-size: $font-size-paragraph;
+  line-height: 1.5;
+  font-family: $font-family-01;
+}
+
+.font-size-default { font-size: $font-size-default; }
+// OPACITY
+.text-opacity-hg { opacity: $font-opacity-hg; }
+.text-opacity-md { opacity: $font-opacity-md; }
+.text-opacity-sm { opacity: $font-opacity-sm; }
+
+// ALIGN
+.text-left { text-align: left }
+.text-center { text-align: center }
+.text-right { text-align: right; }
+
+// VERTICAL ALIGN
+.align-middle { vertical-align: middle }
+
+// FONT WEIGHT
+.font-normal { font-weight: $font-weight-regular }
+.font-bold { font-weight: $font-weight-bold }
+
+.line-height-default { line-height: 1.4 }
+
+// TEXT TRANSFORM
+.text-uppercase { text-transform: uppercase }
+.text-lowercase { text-transform: lowercase }
+.text-capitalize { text-transform: capitalize }
+
+// TEXT OVERFLOW
+.text-overflow-ellipsis { text-overflow: ellipsis;}
+.text-overflow-hidden { overflow: hidden;}
