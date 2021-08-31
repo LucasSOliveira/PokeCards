@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import api from 'src/api'
 import { serialize } from 'src/assets/utils'
-import mock from './mock';
 
 @Component({
   template: `
@@ -36,13 +35,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    const alphabeticOrder = mock.data.sort((a, b) => {
-      const itemA = a.name.toLocaleUpperCase()
-      const itemB = b.name.toLocaleUpperCase()
-      
-      return itemA.localeCompare(itemB)
-    })
-    this.pokemons = alphabeticOrder
+   this.getCards()
   }
 
   getCards() {
@@ -51,7 +44,13 @@ export class HomeComponent implements OnInit {
     console.log(params)
     return api.get(`cards?${serialize(params)}`)
       .then(({ data }) => {
-        this.pokemons = data.data
+        const alphabeticOrder = data.data.sort((a, b) => {
+          const itemA = a.name.toLocaleUpperCase()
+          const itemB = b.name.toLocaleUpperCase()
+          
+          return itemA.localeCompare(itemB)
+        })
+        this.pokemons = alphabeticOrder
       })
   }
 }
