@@ -17,15 +17,9 @@
 .container {
   @extend %util;
   max-width: breakpoint(lg);
-  margin: {
-    left: auto;
-    right: auto;
-  }
-  padding: {
-    left: $spacing-padding-medium;
-    right: $spacing-padding-medium;
-  }
+  margin: 0 auto;
   width: 100%;
+  padding: 0 $spacing-padding-medium;
   @include device-size(md) {
     max-width: breakpoint(md);
     padding: 0 $spacing-padding-xxsmall;

@@ -1,6 +1,25 @@
-.test {
-    grid-gap: 12px;
-    display: flex;
-    overflow: hidden;
+.cards-list {
+	display: flex;
+    align-items: center;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    &__card{
+        & + & {
+            margin-left: 16px;
+        }
+    }
+    @media only screen and (min-width: 960px) {
+        display: grid;
+        grid-gap: 16px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        overflow: inherit;
+        &__card{
+            & + & {
+                margin: 0;
+            }
+        }
+    }
 }
 
