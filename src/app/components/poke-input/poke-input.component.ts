@@ -10,7 +10,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
       [id]="id"
       [placeholder]="placeholder"
       type="input"
-      (ngModel)="value"
+      [value]="value || ''"
+      (keyup)="onKey($event)"
     />
   </div>
   `,
@@ -20,12 +21,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class PokeInputComponent implements OnInit {
 
   constructor() {}
-
-  value = ''
-  
   ngOnInit(): void {}
   @Input() id: string
   @Input() label: string
   @Input() placeholder: string
+  @Output() changeValue = new EventEmitter()
+  @Input() value: any
 
+  onKey(event) {
+    const { value } = event.target
+    this.changeValue.emit(value) 
+  }
 }

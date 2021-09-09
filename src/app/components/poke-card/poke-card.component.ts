@@ -1,46 +1,20 @@
-import { Component, Input, OnInit } from "@angular/core"
+import { Component, Input } from "@angular/core"
 
 @Component({
   selector: "poke-card",
   template: `
     <div class="card" [ngClass]="setBgCard()">
-      <img [src]="pokemon.images.small" alt="pokemon-img"/>
-      <div class="flex flex-col">
-        <span>Name: <span>{{ pokemon.name }}</span></span>
-        <span>ID: <span>{{ pokemon.id }}</span></span>
-        <span>
-          Types: 
-          <span 
-            *ngFor="let type of pokemon.types; 
-            last as isLast">
-              {{ type }}
-              <span *ngIf="!isLast">, </span>
-          </span>
-        </span>
-      </div>
-      <div>
-
-      </div>
+      <img [src]="pokemon.images.small" alt="pokemon-img" loading="lazy"/>
+      <div class="card__details flex flex-col mt-1-2">
+        <div><b>Name: </b><span>{{ pokemon.name }}</span></div>
+        <div><b>ID: </b><span>{{ pokemon.id }}</span></div>
+        <div><b>Types: </b><span *ngFor="let type of pokemon.types">{{ type }}</span></div>
     </div>
   `,
-  styles: [
-    `.card {
-      width: 250px;
-      height: 400px;
-      padding: 8px;
-      cursor: pointer;
-    }
-    img {
-      width: 100%;
-    }
-    `
-  ]
+  styleUrls:['./poke-card.component.scss']
 })
-export class PokeCardComponent implements OnInit {
+export class PokeCardComponent {
   constructor() {}
-
-  ngOnInit(): void {}
-  
   @Input() pokemon: any
   setBgCard() {
     const type = this.pokemon.types[0].toLowerCase()

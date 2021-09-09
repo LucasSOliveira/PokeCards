@@ -8,6 +8,7 @@ import { CardDetailsComponent } from './pages/card-details/card-details.componen
 import { PokeInputComponent } from './components/poke-input/poke-input.component';
 import { PokeCardComponent } from './components/poke-card/poke-card.component';
 import { PokeModalComponent } from './components/poke-modal/poke-modal.component';
+import { PokePaginatorComponent } from './components/poke-paginator/poke-paginator.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PokeModalComponent } from './components/poke-modal/poke-modal.component
     CardDetailsComponent,
     PokeInputComponent,
     PokeCardComponent,
-    PokeModalComponent
+    PokeModalComponent,
+    PokePaginatorComponent
   ],
   imports: [
     BrowserModule,

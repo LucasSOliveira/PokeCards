@@ -1,0 +1,37 @@
+.poke-paginator {
+  width: 250px;
+  margin: 16px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 8px;
+  background-color: #bba3ffce;
+  font-size: 14px;
+  bottom: 16px;
+  position: fixed;
+  @media only screen and (max-height: 568px){
+      position: relative;
+      margin-bottom: 16px;
+  }
+  button {
+    background: none;
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  &--previous {
+    margin-left: 8px;
+  }
+  &--next {
+    margin-right: 8px;
+
+    transform: rotate(180deg);
+  }
+
+  &__input {
+    width: 60px;
+  }
+}
